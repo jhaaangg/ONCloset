@@ -19,23 +19,27 @@
 
 <body>
 
-<video id="video" width="360" height="300" autoplay></video>
-<button id="snap">Take a photo</button>
-<canvas id="canvas" width="360" height="300"></canvas>
+<div id="footer" class="navbar navbar-inverse navbar-fixed-bottom" style="font-size: 30px;">
+  <div id="bottom navbar" align="center" >
+    <div id="navbar buttons">
+      <a href="home.html"><span class="ion-ios-home"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      
+      <!-- <form enctype="multipart/form-data" id = "formUpload"> -->
+      <a href="camaccess.html"><span class="ion-ios-camera"><!-- <input type = "file" name = "uploadFile" id = "uploadFile"> --></span></a>
+      </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <!-- </form> -->
 
- 	<form enctype="multipart/form-data" id = "formUpload">
-    <a href="camaccess.html"><span class="ion-ios-camera">
-    <input type = "file" name = "uploadFile" id = "uploadFile">
-    </span></a>
-    </form>
+      <a href="profile.html" id = "viewMypost"><span class="ion-ios-person"></span></a><br>
 
+      
+    </div>
+  </div>
+</div>
 
-<!-- <input type="file" accept="image/*;capture=camera">
- -->
 <script type="text/javascript" src="../js/jquery.js"></script>
 <script type="text/javascript" src="../js/bootstrap.js"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-
+<!-- <script type="text/javascript" src="../js/script.js"></script> -->
 <script src = "../js/camaccess.js"></script>
 	
 </body>
