@@ -15,68 +15,6 @@
 <link rel="stylesheet" type="text/css" href="../css/css.css">
 <link rel="stylesheet" type="text/css" href="../css/style.css">
 
-    </script>
-    <!-- Internal Styles -->
-    <style type="text/css">
-      body{
-        display: none;
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-        background-color: whitesmoke;
-      }
-      #uploadBtn{
-        border: 1px solid green;
-      }
-      .page-header{
-        text-align: center;
-        font-family: Broadway;
-        font-size: 20px;
-        color: green;
-        padding-top: 15px;
-        padding-bottom: 15px;
-      }
-      .container {
-        margin-top: 20px;
-          margin-left: auto;
-          margin-right: auto; 
-      }
-      #addnew_content{
-        position: absolute;
-        top: 50%;
-        height: 70%;
-        width: 90%;
-      }
-      #cancel{
-        color: orange;
-      }
-      #cameraTakePicture{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 50vh;
-        background-color: #fff;
-        border: 1px solid orange;
-        box-shadow: 0 0 0 transparent;
-      }
-      #cameraTakePicture img{
-        width: 100%;
-        height: 100%;
-        position: relative;
-        margin: 0;
-      }
-      #fileToUpload{
-        position: absolute;
-        bottom: 0vh;
-        width: 100vw;
-        left:0;
-      }
-      /*#cameraTakePicture .outer {\
-        position: absolute;
-        left: 0;
-      }*/
-    </style>
 </head>
 <body>
     
@@ -90,38 +28,34 @@
               <div class="divider"></div>  
 
           <form id="myform">
-                <input type="hidden" id="user_id" name="user_id">
-            <div class="input-field col s6">
-                <input name="outfit_name" value="" id="outfit_name" type="text" class="validate">
-                  <label for="outfit_name">Outfit's name</label>
-              </div>
-              <div class="input-field col s6">
-              <!-- <input name="food_location" value="" id="food_location" type="text" class="validate"> -->
-               <input id="autocomplete" onFocus="geolocate()" name="food_loc" type="text"></input>
-                <input type="hidden" id="food_location" name="food_location">
-                  <label for="food_loc">Location</label>
-              </div>
-              <div class="file-field input-field">
+
+            <div class="file-field input-field">
                 <div class="btn" id="cameraTakePicture">
                   <!-- <div class="outer">
                   <div class="middle">
                   <div class="inner">  -->
-                    <button href="#" id="myImage">
+                    <img src="../img/dp.jpg" id="myImage">
                     <input type="text" name="fileToUpload" id="fileToUpload">
                     <!-- <button id="cameraTakePicture">Take Picture</button> -->
                   <!-- </div>
                   </div>
                   </div> -->
                 </div>
-                <div>
-                  
-                </div>
+                
               </div>
+
+                <input type="hidden" id="user_id" name="user_id">
+            <div class="input-field col s6">
+                <input name="outfit_name" value="" id="outfit_name" type="text" class="validate">
+                  <label for="outfit_name">Outfit's name</label>
+              </div>
+
+              
 
                   <button id="uploadBtn" type="submit" name="submit" class="btn-flat right btn-default">
                     UPLOAD
                   </button>
-                <a href="../index.html" id="cancel" class="btn-flat right">
+                <a href="../pages/home.html" id="cancel" class="btn-flat right">
                     CANCEL
                   </a>
           </form>
@@ -133,6 +67,7 @@
     <script type="text/javascript" src="../js/jquery.js"></script>
     <script type="text/javascript" src="../js/bootstrap.js"></script>
     <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
     <script src="../js/camera.js">
     </script>
 </body>
