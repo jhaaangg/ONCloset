@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ONCloset</title>
+
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="../css/ionicons.css">
+<link rel="stylesheet" type="text/css" href="../css/ionicons.min.css">
+<link rel="stylesheet" type="text/css" href="../css/css.css">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+</head>
+<body>
+
+<div id="header" class="navbar navbar-inverse navbar-fixed-bottom">
+  <div id="bottom navbar" align="center" >
+    <div>
+      <a id = "logout" onclick = "logout()">LOGOUT</a>
+    </div>
+  </div>
+</div>
+
+<br><br><br>
+
+<div id = "bodyContent"></div>
+
+<div id="footer" class="navbar navbar-inverse navbar-fixed-bottom" style="font-size: 30px;">
+  <div id="bottom navbar" align="center" >
+    <div id="navbar buttons">
+      <a href="home.html"><span class="ion-ios-home"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      
+      <!-- <form enctype="multipart/form-data" id = "formUpload"> -->
+      <a href="../php/camaccess.php"><span class="ion-ios-camera"><!-- <input type = "file" name = "uploadFile" id = "uploadFile"> --></span></a>
+      </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <!-- </form> -->
+
+      <a href="profile.html" id = "viewMypost"><span class="ion-ios-person"></span></a><br>
+
+      
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/bootstrap.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+
+<script>
+
+var info = JSON.parse(localStorage.getItem("userCredentials"));
+var userID = info[0].userID;
+
+    function logout(){
+      localStorage.removeItem("userCredentials");
+      location.replace("../index.html");
+    }
+
+$("#viewMypost").click(function(){
+  $.ajax({
+    method : "POST",
+    url : "../php/myposts.php",
+    data : {"userID":userID},
+    success:function(data){
+      console.log(data);
+      displayDT(data);
+    },
+    error : function(){
+      alert("Error");
+    }
+  });
+});
+
+function displayDT(data)
+{
+  $("#bodyContent").empty();
+  for(var i = 0;i<data.length;i++)
+  {
+    var dT = "Posted by " + data[i].userName +"<img src = ../uploads/" + data[i].id + "." + data[i].type + " width = 125 height = 125><br>";
+    $("#bodyContent").append(dT);
+  }
+}
+
+
+ // $("#formUpload").submit(function(e){
+ //  e.preventDefault();
+ //  var fd = new FormData(this);
+ //  fd.append("userID",userID);
+ //  $.ajax({
+ // contentType:false,
+ //                cache:false,
+ //                processData:false,
+ //                method  : "POST",
+ //                url : "../php/upload.php",
+ //                data : fd,
+ //                success : function(data){
+ //                  console.log(data);
+ //                  location.reload();
+ //                },
+ //                error : function(){
+ //                  alert("Error");
+ //                }
+
+ //  });
+ // });
+</script>
+
+</body>
+
+</html>
