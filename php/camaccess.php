@@ -19,7 +19,7 @@
 
 <body>
 
-<video id="video" width="360" height="300" autoplay></video>
+<!-- <video id="video" width="360" height="300" autoplay></video>
 <button id="snap">Take a photo</button>
 <canvas id="canvas" width="360" height="300"></canvas>
 
@@ -28,6 +28,9 @@
     <input type = "file" name = "uploadFile" id = "uploadFile">
     </span></a>
     </form>
+ -->
+
+<input type="file" accept="image/*" capture="camera" src="">
 
 <script type="text/javascript" src="../js/jquery.js"></script>
 <script type="text/javascript" src="../js/bootstrap.js"></script>
@@ -73,23 +76,23 @@ function displayDT(data)
 }
 
 // Get access to the camera!
-if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-    // Not adding `{ audio: true }` since we only want video now
-    navigator.mediaDevices.getUserMedia({ video: true, audio: true }).then(function(stream) {
-        video.src = window.URL.createObjectURL(stream);
-        video.play();
-    });
-}
+// if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+//     // Not adding `{ audio: true }` since we only want video now
+//     navigator.mediaDevices.getUserMedia({ video: true, audio: true }).then(function(stream) {
+//         video.src = window.URL.createObjectURL(stream);
+//         video.play();
+//     });
+// }
 
-// Elements for taking the snapshot
-var canvas = document.getElementById('canvas');
-var context = canvas.getContext('2d');
-var video = document.getElementById('video');
+// // Elements for taking the snapshot
+// var canvas = document.getElementById('canvas');
+// var context = canvas.getContext('2d');
+// var video = document.getElementById('video');
 
-// Capture Image 
-document.getElementById("snap").addEventListener("click", function() {
-	context.drawImage(video, 0, 0, 360, 300);
-});
+// // Capture Image 
+// document.getElementById("snap").addEventListener("click", function() {
+// 	context.drawImage(video, 0, 0, 360, 300);
+// });
 </script>
 	
 </body>
