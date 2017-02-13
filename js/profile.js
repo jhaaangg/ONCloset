@@ -13,19 +13,19 @@ var userID = info[0].userID;
  // });
 
 
-$(document).ready(function(e){
-  $.ajax({
-    method : "POST",
-  url :"../php/getposts.php",
-  success : function(data){
-    console.log(data);
-    displayDT(data);
-  },
-  error : function(){
-    alert("Error");
-  }
-  });
-});
+// $(document).ready(function(e){
+//   $.ajax({
+//     method : "POST",
+//   url :"../php/getposts.php",
+//   success : function(data){
+//     console.log(data);
+//     displayDT(data);
+//   },
+//   error : function(){
+//     alert("Error");
+//   }
+//   });
+// });
 
 
 $("#viewMypost").click(function(){

@@ -27,7 +27,7 @@
              $('#uploadBtn').text('Uploading...');
             if($('#outfit_name').val() != ''){{
                     $.ajax({
-                        url: domain + 'api/validate_image.php',
+                        url: '../php/validate_image.php',
                         type: 'POST',
                         data: new FormData(this),
                         processData: false,
@@ -35,7 +35,7 @@
                         success: function(response){
                             if(response.success){
                                 console.log(response);
-                                location.href = '../index.html';
+                                location.href = '../pages/home.html';
                             }else{
                                 $('#uploadBtn').text('UPLOAD');
                                 console.log(response.error);

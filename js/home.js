@@ -48,7 +48,7 @@ function displayDT(data)
   $("#bodyContent").empty();
   for(var i = 0;i<data.length;i++)
   {
-    var dT = data[i].userName + "<br>" +"<img src = ../uploads/" + data[i].id + "." + data[i].type + " width = 360 height = 360><br>";
+    var dT = "<div id='data_post'><p>" + data[i].userName + "</p><br>" +"<img src = ../uploads/" + data[i].id + "." + data[i].type + "><br></div>";
     $("#bodyContent").append(dT);
   }
 }
