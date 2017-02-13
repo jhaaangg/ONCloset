@@ -1,6 +1,7 @@
 <?php 
 header("Access-Control-Allow-Origin:*");
 require_once 'connection.php';
+
 $id = $_POST['id'];
 // $food_name_nowhitespace = preg_replace('/\s/', '', $food_name);
 $userId = $_POST['userId'];
@@ -19,7 +20,7 @@ $file = fopen($filepath, 'w');
 fwrite($file, $filedata);
 fclose($file);
 
-$sql = "INSERT INTO tbl_uploads (id, userId,type) VALUES (NULL, ".$userId.", '".$id."')";
+$sql = "INSERT INTO tbl_uploads(userId,type) VALUES ($userID,'$ext')";
 
 if(mysqli_query($conn, $sql)){
  $array = array(
