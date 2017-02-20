@@ -5,8 +5,18 @@ body{
         height: 100%;
         background-color: whitesmoke;
       }
+      #cancel{
+      position: absolute;
+      right: 35vw;
+      box-shadow: none;
+      background-color: transparent;
+      color: #fff;
+      cursor: pointer;
+      }
       #uploadBtn{
-        border: 1px solid green;
+      position: absolute;
+      right: 5vw;
+      color: #000;
       }
       .page-header{
         text-align: center;
@@ -15,6 +25,7 @@ body{
         color: white;
         padding-top: 15px;
         padding-bottom: 15px;
+        border-bottom: 0px solid transparent;
       }
       .container {
         margin-top: 20px;
@@ -25,10 +36,7 @@ body{
         position: absolute;
         top: 50%;
         height: 70%;
-        width: 90%;
-      }
-      #cancel{
-        color: orange;
+        width: 80%;
       }
       #cameraTakePicture{
         position: fixed;
@@ -37,7 +45,6 @@ body{
         width: 100vw;
         height: 50vh;
         background-color: #fff;
-        border: 1px solid orange;
         box-shadow: 0 0 0 transparent;
       }
       #cameraTakePicture img{

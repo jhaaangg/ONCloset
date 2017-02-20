@@ -15,6 +15,7 @@
 <link rel="stylesheet" type="text/css" href="../css/css.css">
 <link rel="stylesheet" type="text/css" href="../css/style.css">
 
+<script type="text/javascript" src="../js/jquery.js"></script>
 <script type="text/javascript" src="../js/bootstrap.js"></script>
 <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 
@@ -24,12 +25,13 @@
 
 <div id="header" class="navbar navbar-inverse navbar-fixed-bottom">
   <div id="bottom navbar" align="left" >
+    
     <div id="searchbar" class='input-field col s6'>
             <input name='search' id='keyword' type='text'>
             <a href='../index.html' id="homeicon">
             </a>
             <a href='#' id="searchicon" onclick="Search()">
-                <i class='ion-search' id="search_button">Search</i>
+                <i><label class='ion-search' id="search_button">Search</label></i>
             </a>
         </div>
   </div>
@@ -58,12 +60,12 @@
 <div id="footer" class="navbar navbar-inverse navbar-fixed-bottom" style="font-size: 30px;">
   <div id="bottom navbar" align="center" >
     <div id="navbar buttons">
-      <a href="home.html"><span class="ion-ios-home"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="home.html"><span class="ion-ios-home"></span></a>
       
       <!-- <form enctype="multipart/form-data" id = "formUpload"> -->
       <a href="camaccess.html"><span class="ion-ios-camera">
       <!-- <input type = "file" name = "uploadFile" id = "uploadFile"> --></span></a>
-      </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span>
       <!-- </form> -->
 
       <a href="profile.html" id = "viewMypost"><span class="ion-ios-person"></span></a><br>
@@ -74,6 +76,6 @@
 </div>
 
 </body>
-<script type="text/javascript" src="../js/jquery.js"></script>
+
 <script type="text/javascript" src="../js/search.js"></script>
 </html>

@@ -48,7 +48,7 @@ function displayDT(data)
   $("#bodyContent").empty();
   for(var i = 0;i<data.length;i++)
   {
-    var dT = "<div id='data_post'><p>" + data[i].userName + "</p><br>" +"<img src = ../uploads/" + data[i].id + "." + data[i].type + "><br></div>";
+    var dT = "<div id='data_post'><b><p>" + data[i].userName + "</p></b>" +"<img src = ../uploads/" + data[i].id + "." + data[i].type + "><br><div id='like_comment'><a href='search.html'><span class='ion-chatbox'></span></a><a href='search.html'><span class='ion-ios-heart'></span></a></div></div>";
     $("#bodyContent").append(dT);
   }
 }

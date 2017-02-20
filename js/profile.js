@@ -37,9 +37,9 @@ $("#viewMypost").click(function(){
       console.log(data);
       displayDT(data);
     },
-    error : function(){
-      alert("Error");
-    }
+    // error : function(){
+    //   alert("Error");
+    // }
   });
 });
 
