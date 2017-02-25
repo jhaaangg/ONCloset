@@ -6,26 +6,26 @@ var userID = info[0].userID;
       location.replace("../index.html");
     }
 
- // $(function(){
- //  $("#uploadFile").change(function(){
- //    $("#formUpload").submit();
- //  });
- // });
+ $(function(){
+  $("#uploadFile").change(function(){
+    $("#formUpload").submit();
+  });
+ });
 
 
-// $(document).ready(function(e){
-//   $.ajax({
-//     method : "POST",
-//   url :"../php/getposts.php",
-//   success : function(data){
-//     console.log(data);
-//     displayDT(data);
-//   },
-//   error : function(){
-//     alert("Error");
-//   }
-//   });
-// });
+$(document).ready(function(e){
+  $.ajax({
+    method : "POST",
+  url :"../php/getposts.php",
+  success : function(data){
+    console.log(data);
+    displayDT(data);
+  },
+  error : function(){
+    alert("Error");
+  }
+  });
+});
 
 
 $("#viewMypost").click(function(){
@@ -37,9 +37,9 @@ $("#viewMypost").click(function(){
       console.log(data);
       displayDT(data);
     },
-    // error : function(){
-    //   alert("Error");
-    // }
+    error : function(){
+      alert("Error");
+    }
   });
 });
 
@@ -54,24 +54,24 @@ function displayDT(data)
 }
 
 
- // $("#formUpload").submit(function(e){
- //  e.preventDefault();
- //  var fd = new FormData(this);
- //  fd.append("userID",userID);
- //  $.ajax({
- // contentType:false,
- //                cache:false,
- //                processData:false,
- //                method  : "POST",
- //                url : "../php/upload.php",
- //                data : fd,
- //                success : function(data){
- //                  console.log(data);
- //                  location.reload();
- //                },
- //                error : function(){
- //                  alert("Error");
- //                }
+ $("#formUpload").submit(function(e){
+  e.preventDefault();
+  var fd = new FormData(this);
+  fd.append("userID",userID);
+  $.ajax({
+ contentType:false,
+                cache:false,
+                processData:false,
+                method  : "POST",
+                url : "../php/upload.php",
+                data : fd,
+                success : function(data){
+                  console.log(data);
+                  location.reload();
+                },
+                error : function(){
+                  alert("Error");
+                }
 
- //  });
- // });
+  });
+ });
