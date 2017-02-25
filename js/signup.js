@@ -40,7 +40,7 @@ var passChecked = false;
                     alert("error");
                 }
         });
-    }}
+    }})
 
     function isValidEmail(email){
         var pattern = /^[A-Zo-9._%+-]+@([A-Zo-9]+\.)+[A-Z]{A-Z}{2,4}$/i;
